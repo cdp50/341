@@ -1,0 +1,41 @@
+GET http://localhost:3000/   HTTP/1.1
+
+###
+
+GET http://localhost:3000/superAwesome   HTTP/1.1
+
+###
+
+GET http://localhost:3000/contacts/   HTTP/1.1
+
+###
+
+POST  http://localhost:3000/contacts/   HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "platanito",
+    "lastName": "parra",
+    "email": "hola@hola.com",
+    "favoriteColor": "blue",
+    "birthday": "08/06/1992"
+}
+
+###
+
+PUT  http://localhost:3000/contacts/645a6e7887525a6d13c1ae58   HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "claudito",
+    "lastName": "parra",
+    "email": "hola@hola.com",
+    "favoriteColor": "blue",
+    "birthday": "08/06/1992"
+}
+
+###
+
+DELETE  http://localhost:3000/contacts/645a6e7887525a6d13c1ae58   HTTP/1.1
+
+

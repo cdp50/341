@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const contactsSchema = mongoose.Schema(
+const contactsSchema = new mongoose.Schema(
     {
         firstName:{
         type: String,
@@ -18,7 +18,7 @@ const contactsSchema = mongoose.Schema(
         required: [true, 'favoriteColor is required'],
         },
         birthday:{
-        type: Number,
+        type: String,
         required: [true, 'birthday is required'],
         }
     },
