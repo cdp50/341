@@ -32,6 +32,7 @@ mongoose
   });
 
 app.use('/', require('./routes/index'));
+app.use('/', require('./routes/routes-swagger'));
 
 
 

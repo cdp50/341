@@ -12,6 +12,16 @@ controllerCont.getAllContacts = async (req, res) => {
     }
   };
 
+controllerCont.getOneContact = async (req, res) => {
+try {
+  const {id} = req.params;
+  const Contact = await contModel.findById(id);
+  res.status(200).json(Contact);
+} catch (err) {
+  res.status(500).json({ message: err.message });
+}
+};
+
 // Create new Contacts
 controllerCont.createContact = async (req, res) => {
     try {
@@ -34,7 +44,7 @@ controllerCont.updateContact = async (req, res) => {
     }
   };
 
-// edit Contacts
+// edit Contact
 controllerCont.deleteContact = async (req, res) => {
     try {
       const {id} = req.params;
